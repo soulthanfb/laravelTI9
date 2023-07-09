@@ -43,9 +43,9 @@
                     <td>{{$no++}}</td>
                     <td>{{$p->nama}}</td>
                     <td>
-                        <a class="btn btn-primary" href="">View</a>
-                        <a class="btn btn-primary" href="">Edit</a>
-                        <a class="btn btn-primary" href="">Delete</a>
+                        <a class="btn btn-primary" href="{{url('kategori/view/'.$p->id)}}">View</a>
+                        <a class="btn btn-primary" href="{{url('kategori/edit/'.$p->id)}}">Edit</a>
+                        <a class="btn btn-primary" href="{{url('kategori/edit/'.$p->id)}}" onclick="confirmDelete(event)" >Delete</a>
                     </td>
                 </tr>
                 @endforeach

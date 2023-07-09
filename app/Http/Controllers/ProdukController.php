@@ -66,9 +66,10 @@ class ProdukController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function view(string $id)
     {
         $produk = Produk::find($id);
+        $kategori_produk = DB::table('kategori_produk')->get();
         return view('admin.produk.view', compact('kategori_produk' ,'produk'));
     }
 

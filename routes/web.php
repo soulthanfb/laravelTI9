@@ -43,9 +43,15 @@ Route::post('/hasil', [FormController::class, 'store']);
 Route::group(['middleware'=>['auth','role:admin-manager']],function(){
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/tables', [DashboardController::class, 'index']);
-Route::get('/produk', [ProdukController::class, 'index']);
+
+//ini adalah kategori
 Route::get('/kategori', [KategoriController::class, 'index']);
+
+//ini adalah pesanan
 Route::get('/pesanan', [PesananController::class, 'index']);
+
+//ini adalah produk
+Route::get('/produk', [ProdukController::class, 'index']);
 Route::get('/produk/create', [ProdukController::class, 'create']);
 Route::get('/produk/edit/{id}', [ProdukController::class, 'edit']);
 Route::post('/produk/update', [ProdukController::class, 'update']);

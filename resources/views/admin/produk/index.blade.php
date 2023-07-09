@@ -62,7 +62,7 @@
                     <td>{{$p->stok}}</td>
                     <td>{{$p->nama_kategori}}</td>
                     <td>
-                        <a class="btn btn-primary" href="">View</a>
+                        <a class="btn btn-primary" href="{{url('produk/view/'.$p->id)}}"">View</a>
                         <a class="btn btn-primary" href="{{url('produk/edit/'.$p->id)}}">Edit</a>
                         <a class="btn btn-primary" href="{{url('produk/delete/'.$p->id)}}">Delete</a>
                     </td>
